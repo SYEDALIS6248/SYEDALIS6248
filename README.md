@@ -41,6 +41,12 @@ Passionate about building robust backend systems, full-stack applications, and i
 
 ---
 
+### 🧩 Omnitrix Tech Stack Animation
+
+![Omnitrix Tech Stack Animation](./omnitrix-tech.svg)
+---
+
+
 ## 📊 GitHub Stats
 
 <div align="center">
