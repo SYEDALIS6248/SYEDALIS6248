@@ -40,10 +40,10 @@ Passionate about building robust backend systems, full-stack applications, and i
 [![Skills](https://skillicons.dev/icons?i=gcp,git,github,vscode)](https://skillicons.dev)
 
 ---
-
+<!--
 ### Omnitrix tech stack animation
 
-<!--div align="center">
+<div align="center">
   
   ![Omnitrix Tech Stack Animation](./omnitrix-tech.svg)
   
