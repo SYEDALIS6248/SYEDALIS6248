@@ -9,7 +9,6 @@
         --accent: #1db954;
         --muted: #9aa0a6;
         --text: #ffffff;
-        --item-w: 180px;
         --cycle: 14s;
       }
       svg{background:var(--bg);}
@@ -47,42 +46,32 @@
     </style>
   </defs>
 
-  <!-- Title (optional, invisible on light backgrounds) -->
-  <text x="350" y="28" fill="#cfd8dc" font-family="Inter, Arial" font-size="14" text-anchor="middle">Omnitrix Tech Stack Animation</text>
+  <!-- Title -->
+  <text x="350" y="28" fill="#cfd8dc" font-family="Inter, Arial" font-size="14" text-anchor="middle">Omnitrix tech stack</text>
 
-  <!-- Watch / Omnitrix body (centered) -->
+  <!-- Watch body -->
   <g transform="translate(350,160)">
     <circle cx="0" cy="0" r="120" class="watch-face"/>
     <circle cx="0" cy="0" r="150" class="outer-ring"/>
     <circle cx="0" cy="0" r="95" class="inner-ring"/>
-
-    <!-- decorative nodes -->
     <g>
       <circle cx="0" cy="-120" r="6" fill="#111"/>
       <circle cx="0" cy="120" r="6" fill="#111"/>
       <circle cx="-120" cy="0" r="6" fill="#111"/>
       <circle cx="120" cy="0" r="6" fill="#111"/>
     </g>
-
-    <!-- central diamond/hourglass motif (Omnitrix-inspired, stylized) -->
     <g>
       <polygon class="diamond" points="0,-30 20,0 0,30 -20,0"/>
       <rect x="-6" y="-2" width="12" height="4" fill="#0b0b0b"/>
     </g>
   </g>
 
-  <!-- Carousel area (items slide across center) -->
+  <!-- Carousel items -->
   <g transform="translate(0,0)">
-    <!-- invisible alignment box -->
-    <rect x="70" y="110" width="560" height="100" fill="none"/>
-
-    <!-- Item template positions (all items share same layout; only translateX changes via animation) -->
-
     <!-- Java -->
     <g class="tech-group item i1">
       <g transform="translate(350,160)">
         <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <!-- simple coffee cup icon -->
         <g transform="translate(200,0) scale(1)">
           <rect x="-18" y="-10" width="36" height="22" rx="4" class="icon-fill"/>
           <path d="M6 -10 q6 -8 0 -14" stroke="#c76c00" stroke-width="2" fill="none"/>
