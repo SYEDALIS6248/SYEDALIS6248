@@ -5,22 +5,18 @@
       :root{
         --bg: transparent;
         --face: #0b0b0b;
-        --ring: #1a1a1a;
+        --ring: #111;
         --accent: #1db954;
-        --muted: #9aa0a6;
-        --text: #ffffff;
-        --cycle: 14s;
+        --text: #e6f7ff;
+        --cycle: 16s;
       }
       svg{background:var(--bg);}
       .watch-face{fill:var(--face); stroke:var(--ring); stroke-width:3;}
-      .outer-ring{fill:none; stroke:var(--ring); stroke-width:8;}
-      .inner-ring{fill:none; stroke:#111; stroke-width:6;}
-      .accent{fill:var(--accent);}
+      .outer-ring{fill:none; stroke:var(--ring); stroke-width:8; opacity:0.9;}
+      .inner-ring{fill:none; stroke:#0d0d0d; stroke-width:6;}
       .diamond{fill:var(--accent);}
       .label{fill:var(--text); font-family:Inter, Arial, sans-serif; font-size:13px; text-anchor:middle;}
-      .item-box{fill:#0f0f0f; stroke:#222; rx:10;}
-      .icon-fill{fill:var(--muted);}
-      .icon-accent{fill:var(--accent);}
+      .item-box{fill:#0f0f0f; stroke:#222; rx:12;}
       .tech-group{opacity:1;}
       .item{
         transform-origin:350px 160px;
@@ -34,31 +30,32 @@
       .item.i6{animation-delay: calc(var(--cycle) * -0.625);}
       .item.i7{animation-delay: calc(var(--cycle) * -0.75);}
       .item.i8{animation-delay: calc(var(--cycle) * -0.875);}
-
       @keyframes slide{
         0%   { transform: translateX(260px) scale(0.85); opacity:0; }
-        8%   { transform: translateX(100px) scale(0.95); opacity:1; }
-        20%  { transform: translateX(0px) scale(1); opacity:1; }
-        32%  { transform: translateX(-100px) scale(0.95); opacity:1; }
+        6%   { transform: translateX(120px) scale(0.92); opacity:0.6; }
+        12%  { transform: translateX(0px) scale(1); opacity:1; }
+        30%  { transform: translateX(0px) scale(1); opacity:1; }
+        36%  { transform: translateX(-120px) scale(0.92); opacity:0.6; }
         40%  { transform: translateX(-260px) scale(0.85); opacity:0; }
         100% { transform: translateX(-260px) scale(0.85); opacity:0; }
       }
+      .title{fill:#bcdfff; font-family:Inter, Arial; font-size:14px; text-anchor:middle;}
     </style>
   </defs>
 
   <!-- Title -->
-  <text x="350" y="28" fill="#cfd8dc" font-family="Inter, Arial" font-size="14" text-anchor="middle">Omnitrix tech stack</text>
+  <text x="350" y="28" class="title">Omnitrix Tech Stack</text>
 
-  <!-- Watch body -->
+  <!-- Omnitrix body -->
   <g transform="translate(350,160)">
     <circle cx="0" cy="0" r="120" class="watch-face"/>
     <circle cx="0" cy="0" r="150" class="outer-ring"/>
     <circle cx="0" cy="0" r="95" class="inner-ring"/>
     <g>
-      <circle cx="0" cy="-120" r="6" fill="#111"/>
-      <circle cx="0" cy="120" r="6" fill="#111"/>
-      <circle cx="-120" cy="0" r="6" fill="#111"/>
-      <circle cx="120" cy="0" r="6" fill="#111"/>
+      <circle cx="0" cy="-120" r="6" fill="#0d0d0d"/>
+      <circle cx="0" cy="120" r="6" fill="#0d0d0d"/>
+      <circle cx="-120" cy="0" r="6" fill="#0d0d0d"/>
+      <circle cx="120" cy="0" r="6" fill="#0d0d0d"/>
     </g>
     <g>
       <polygon class="diamond" points="0,-30 20,0 0,30 -20,0"/>
@@ -66,92 +63,135 @@
     </g>
   </g>
 
-  <!-- Carousel items -->
+  <!-- Carousel items (each item shows centered one-by-one) -->
   <g transform="translate(0,0)">
+
     <!-- Java -->
     <g class="tech-group item i1">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <g transform="translate(200,0) scale(1)">
-          <rect x="-18" y="-10" width="36" height="22" rx="4" class="icon-fill"/>
-          <path d="M6 -10 q6 -8 0 -14" stroke="#c76c00" stroke-width="2" fill="none"/>
-        </g>
-        <text class="label" x="210" y="36">Java</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/java.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Java</text>
       </g>
     </g>
 
     <!-- Python -->
     <g class="tech-group item i2">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <g transform="translate(200,0) scale(1)">
-          <circle cx="-10" cy="-2" r="10" class="icon-accent"/>
-          <circle cx="12" cy="6" r="10" class="icon-fill"/>
-          <circle cx="-12" cy="-4" r="2" fill="#0b0b0b"/>
-          <circle cx="14" cy="8" r="2" fill="#0b0b0b"/>
-        </g>
-        <text class="label" x="210" y="36">Python</text>
-      </g>
-    </g>
-
-    <!-- Spring -->
-    <g class="tech-group item i3">
-      <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <path d="M260,150 C268,140 280,128 300,120" transform="translate(-160,-150)" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <text class="label" x="210" y="36">Spring</text>
-      </g>
-    </g>
-
-    <!-- Flask -->
-    <g class="tech-group item i4">
-      <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <g transform="translate(200,0) scale(1)">
-          <path d="M-6,-12 L6,-12 L10,6 C6,12 -6,12 -10,6 Z" fill="#9aa0a6"/>
-          <rect x="-4" y="-18" width="8" height="6" fill="#9aa0a6"/>
-        </g>
-        <text class="label" x="210" y="36">Flask</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Python</text>
       </g>
     </g>
 
     <!-- MySQL -->
-    <g class="tech-group item i5">
+    <g class="tech-group item i3">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <rect x="170" y="-10" width="44" height="20" rx="3" fill="#2b7bb9"/>
-        <text class="label" x="210" y="36">MySQL</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">MySQL</text>
       </g>
     </g>
 
     <!-- SQLite -->
+    <g class="tech-group item i4">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sqlite.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">SQLite</text>
+      </g>
+    </g>
+
+    <!-- HTML5 -->
+    <g class="tech-group item i5">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">HTML5</text>
+      </g>
+    </g>
+
+    <!-- CSS3 -->
     <g class="tech-group item i6">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <circle cx="200" cy="0" r="12" fill="#6c8ebf"/>
-        <text class="label" x="210" y="36">SQLite</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">CSS3</text>
       </g>
     </g>
 
-    <!-- GCP -->
+    <!-- JavaScript -->
     <g class="tech-group item i7">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <g transform="translate(200,0) scale(0.9)">
-          <rect x="-18" y="-10" width="12" height="8" fill="#fbbc05"/>
-          <rect x="6" y="-10" width="12" height="8" fill="#ea4335"/>
-          <rect x="-6" y="2" width="12" height="8" fill="#34a853"/>
-        </g>
-        <text class="label" x="210" y="36">GCP</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">JavaScript</text>
       </g>
     </g>
 
-    <!-- Node -->
+    <!-- Spring Boot (use spring icon) -->
     <g class="tech-group item i8">
       <g transform="translate(350,160)">
-        <rect x="120" y="-30" width="180" height="60" class="item-box"/>
-        <circle cx="200" cy="0" r="12" fill="#3c873a"/>
-        <text class="label" x="210" y="36">Node</text>
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Spring / Spring Boot</text>
+      </g>
+    </g>
+
+    <!-- Additional items (J2EE, VSCode, Excel, Word, PowerPoint, PowerBI, Node) -->
+    <g class="tech-group item i1" style="animation-delay: calc(var(--cycle) * -1.0);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/java.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">J2EE</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i2" style="animation-delay: calc(var(--cycle) * -1.125);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visualstudiocode.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">VS Code</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i3" style="animation-delay: calc(var(--cycle) * -1.25);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftexcel.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Excel</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i4" style="animation-delay: calc(var(--cycle) * -1.375);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftword.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Word</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i5" style="animation-delay: calc(var(--cycle) * -1.5);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftpowerpoint.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">PowerPoint</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i6" style="animation-delay: calc(var(--cycle) * -1.625);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftpowerbi.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Power BI</text>
+      </g>
+    </g>
+
+    <g class="tech-group item i7" style="animation-delay: calc(var(--cycle) * -1.75);">
+      <g transform="translate(350,160)">
+        <rect x="120" y="-36" width="220" height="72" class="item-box"/>
+        <image href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" x="170" y="-20" width="40" height="40" preserveAspectRatio="xMidYMid meet"/>
+        <text class="label" x="210" y="42">Node.js</text>
       </g>
     </g>
 
