@@ -42,8 +42,10 @@ Passionate about building robust backend systems, full-stack applications, and i
 ---
 
 ### 🧩 Omnitrix Tech Stack Animation
+<div align="center">
+  ![Omnitrix Tech Stack Animation](./omnitrix-tech.svg)
+</div>
 
-![Omnitrix Tech Stack Animation](./omnitrix-tech.svg)
 ---
 
 
