@@ -25,7 +25,7 @@ Passionate about building robust backend systems, full-stack applications, and i
 
 **Languages:**
 
-[![Skills](https://skillicons.dev/icons?i=java,python)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=java,python,html,css,js)](https://skillicons.dev)
 
 **Frameworks:**
 
