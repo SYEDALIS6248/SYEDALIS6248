@@ -39,6 +39,21 @@ Passionate about building robust backend systems, full-stack applications, and i
 
 [![Skills](https://skillicons.dev/icons?i=gcp,git,github,vscode)](https://skillicons.dev)
 
+**Productivity & AI:**
+
+<p>
+
+ 
+  <!-- Working Google Tools -->
+  <img src="https://cdn.simpleicons.org/googledocs/4285F4" width="48" height="48" alt="Google Docs" />&nbsp;  <img src="https://cdn.simpleicons.org/googlesheets/34A853" width="48" height="48" alt="Google Sheets" />&nbsp;
+  <img src="https://cdn.simpleicons.org/gmail/EA4335" width="48" height="48" alt="Gmail" />&nbsp;
+    <!-- Forums & AI -->
+  <img src="https://cdn.simpleicons.org/discourse/000000" width="48" height="48" alt="Forums" />&nbsp;
+  <img src="https://img.icons8.com/color/48/chatgpt.png" width="48" height="48" alt="ChatGPT" />&nbsp; <!-- Fixed ChatGPT -->
+  <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" width="48" height="48" alt="Gemini"/>&nbsp;
+  <img src="https://cdn.simpleicons.org/anthropic/D97757" width="48" height="48" alt="Claude" />
+</p>
+
 ---
 <!--
 ### Omnitrix tech stack animation
